@@ -1,0 +1,20 @@
+# Laravel specific
+/vendor/*
+/node_modules/
+/public/storage
+/storage/*.key
+/.env
+/.env.*.php
+/.phpunit.result.cache
+/storage/logs
+/storage/framework/cache/data
+/bootstrap/cache
+
+# IDE specific
+/.idea
+/.vscode
+
+# System specific
+.DS_Store
+Thumbs.db
+.editorconfig
