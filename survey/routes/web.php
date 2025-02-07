@@ -23,8 +23,8 @@ Route::get('/posts/{Post:slug}', function (Post $Post) {
     return view('Post', ['title' => 'single Post', 'Post' => $Post]);
     });
     
-Route::get('/authors/{User}', function (User $User) {
-    return view('posts', ['title' => 'Articles by'. $User->name,  'posts' => $User->posts]);
+Route::get('/authors/{User:username}', function (User $User) {
+    return view('posts', ['title' => count($User->posts) . 'Articles by'. $User->name,  'posts' => $User->posts]);
     });
 
 Route::get('/contact', function () {

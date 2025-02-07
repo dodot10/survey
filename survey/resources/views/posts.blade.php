@@ -9,9 +9,15 @@
         <a href="/posts/{{$Post['slug']}}" class="hover:underline">
             <h2 class="mb-2 text-3xl tracking-wide">{{ $Post['title']}}</h2>
         </a>
-        <div class="text-base text-gray-500">
-            <a href ="/authors/{{$Post->author->id}}" class="hover:underline">{{$Post->author->name}}</a> | {{$Post -> created_at -> format ('j F y')}} 
+        
+        <div >
+        by
+            <a href ="/authors/{{$Post->author->username}}" class="hover:underline, text-base text-gray-500"class="">{{$Post->author->name}}</a> | {{$Post -> created_at -> format ('j F y')}} 
+        in 
+            <a href="#" class="hover:underline text-base text-gray-500  ">Web Programming</a>
+        
         </div>
+        
         <P class="my-5 font-light">
             {{ Str::limit($Post ['body'], 50)}}
         </P>
