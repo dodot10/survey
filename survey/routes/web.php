@@ -18,7 +18,9 @@ Route::get('/about', function () {
     });
  
 Route::get('/posts', function () {
-    return view('posts' , ['title' => 'Blog', 'posts'=> Post::all()]);
+    // $posts = Post::with(['author', 'Category'])->latest()->get();
+    $posts = Post::latest()->get(); 
+    return view('posts' , ['title' => 'Blog', 'posts'=> $posts]);
     });
 
 Route::get('/posts/{Post:slug}', function (Post $Post) {
@@ -26,10 +28,15 @@ Route::get('/posts/{Post:slug}', function (Post $Post) {
     }); 
     
 Route::get('/categories/{Category:slug}', function (Category $Category) {
+
+    
+    // $posts = $Category->posts->load(['author', 'Category']);
+
     return view('posts', ['title' => 'Articles in'. $Category->name,  'posts' => $Category->posts]);
     });
 
 Route::get('/authors/{User:username}', function (User $User) {
+    // $posts = $User->posts->load(['author', 'Category']);
     return view('posts', ['title' => count($User->posts) . 'Articles by'. $User->name,  'posts' => $User->posts]);
     });
 

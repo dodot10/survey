@@ -12,12 +12,14 @@ class Post extends Model
     protected $fillable = ['title', 'author', 'slug', 'body'];
     use HasFactory;
 
+    protected $with = ['author', 'Category'];
+
     public function author(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    public function category(): BelongsTo
+    public function Category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }

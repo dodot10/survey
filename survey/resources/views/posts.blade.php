@@ -14,7 +14,7 @@
         by
             <a href ="/authors/{{$Post->author->username}}" class="hover:underline, text-base text-gray-500">{{$Post->author->name}}</a> | {{$Post -> created_at -> format ('j F y')}} 
         in 
-            <a href="/categories/{{$Post->Category->slug}}" class="hover:underline text-base text-gray-500  ">{{$Post->category->name}}</a>
+            <a href="/categories/{{$Post->Category->slug}}" class="hover:underline text-base text-gray-500  ">{{$Post->Category->name}}</a>
         
         </div>
         
