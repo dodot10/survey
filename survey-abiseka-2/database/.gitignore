@@ -1,0 +1,66 @@
+# Direktori vendor dan node_modules (dependencies)
+/vendor
+/node_modules
+
+# File environment dan konfigurasi sensitif
+.env
+.env.backup
+.env.local
+.env.*.local
+
+# Cache, logs, dan storage
+/bootstrap/cache/
+storage/*.key
+storage/debugbar/
+storage/framework/cache/
+storage/framework/sessions/
+storage/framework/testing/
+storage/framework/views/
+storage/logs/
+
+# Direktori public yang di-generate
+/public/storage
+/public/hot
+/public/mix-manifest.json
+/public/js/*.map
+/public/css/*.map
+
+# File Composer dan NPM
+composer.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# File IDE & editor
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Direktori testing dan coverage
+.phpunit.result.cache
+coverage/
+.phpstorm.meta.php
+*.log
+*.phpunit.result.cache
+
+# File Laravel specific
+homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# File database SQLite
+/database/*.sqlite
+/database/*.sqlite3
+
+# Cache dan artifacts
+/storage/oauth-private.key
+/storage/oauth-public.key
+/storage/*.sqlite
+/storage/app/public/
+storage/app/testing/
+storage/app/*.log
+
+# Direktori Filament (jika menggunakan Filament)
+storage/livewire-tmp
